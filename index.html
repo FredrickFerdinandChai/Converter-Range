@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title> Converter range</title>
+</head>
+<body>
+    <h1 class="label">Create a Range Converter</h1>
+        <h2 class="Text">Create a Kilometer Converter</h2>
+        <input id="input1" type="number" placeholder="">
+        <button id="btn" onclick="btnFunction1()">Convert</button>
+        <h3> Kilometer    : <span id="Kilometer1"></span></h3>
+        <h3> Meter  : <span id="Meter1"></span></h3>
+        <h3> Centimeter     : <span id="Centimeter1"></span></h3>
+
+        <h2 class="Text"> Create a Meter Converter </h2>
+        <input id="input2" type="number" placeholder=""> 
+        <button id="btn" onclick="btnFunction2()"> Convert </button> 
+        <h3> Kilometer    : <span id="Kilometer2"></span></h3>
+        <h3> Meter  : <span id="Meter2"></span></h3>
+        <h3> Centimeter     : <span id="Centimeter2"></span></h3>
+
+        <h2 class="Text">Create a Centimeter Converter </h2>
+        <input id="input3" type="number" placeholder=""> 
+        <button id="btn" onclick="btnFunction3()"> Convert </button> 
+        <h3> Kilometer    : <span id="Kilometer3"></span></h3>
+        <h3> Meter  : <span id="Meter3"></span></h3>
+        <h3> Centimeter     : <span id="Centimeter3"></span></h3>
+
+        <script>
+            function btnFunction1()
+            {
+                var input1 = document.getElementById("input1").value;
+                var Kilometer = input1;
+                var Meter = (input1*1000);
+                var Centimeter = parseInt(input1)*100000;
+                document.getElementById("Kilometer1").innerHTML += Kilometer + " Kilometer";
+                document.getElementById("Meter1").innerHTML += Meter + " Meter";
+                document.getElementById("Centimeter1").innerHTML += Centimeter + " Centimeter";
+            }
+            function btnFunction2()
+            {
+                var input2 = document.getElementById("input2").value;
+                var Meter2 = input2;
+                var Kilometer2 = (input2/1000);
+                var Centimeter2 = parseInt(input2)*100;
+                document.getElementById("Kilometer2").innerHTML += Kilometer2 + " Celcius";
+                document.getElementById("Meter2").innerHTML += Meter2 + " Farenheit";
+                document.getElementById("Centimeter2").innerHTML += Centimeter2 + " Kelvin";
+            }
+            function btnFunction3()
+            {
+                var input3 = document.getElementById("input3").value;
+                var Centimeter3 = input3;
+                var Kilometer3 = (input3/1000);
+                var Meter3 = (input3)*100;
+                document.getElementById("Kilometer3").innerHTML += Kilometer3 + " Celcius";
+                document.getElementById("Meter3").innerHTML += Meter3 + " Farenheit";
+                document.getElementById("Centimeter3").innerHTML += Centimeter3 + " Kelvin";
+            }
+        </script>
+</body>
+</html>
